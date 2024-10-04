@@ -1,0 +1,30 @@
+
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: upwork-demo-db
+    environment:
+      POSTGRES_DB: upwork_demo_db
+      POSTGRES_USER: upworkuser
+      POSTGRES_PASSWORD: upworkpassword
+    ports:
+      - "5435:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: upwork-demo-app
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/upwork_demo_db
+      SPRING_DATASOURCE_USERNAME: upworkuser
+      SPRING_DATASOURCE_PASSWORD: upworkpassword
+    depends_on:
+      - db
+
+volumes:
+  postgres_data:
