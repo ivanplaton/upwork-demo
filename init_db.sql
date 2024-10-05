@@ -13,6 +13,13 @@ CREATE TABLE users (
     updated_at      TIMESTAMP                       DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE persistent_logins (
+  username          VARCHAR(64)     NOT NULL,
+  series            VARCHAR(64)     PRIMARY KEY,
+  token             VARCHAR(64)     NOT NULL,
+  last_used         TIMESTAMP       NOT NULL
+);
+
 --username: user
 --password: password
 insert into users (username, password, enabled) values ('user', '$2a$12$KmCZtcpZhNsSoq/Gv/KaBuP3IxyT9ifCSWD.kd3qOoDAyHLsypLEK', true);
