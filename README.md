@@ -1,24 +1,32 @@
 # Demo - Java Spring Boot
-This is a demo project for upwork's java spring boot
 
-## prerequisites
+This is a demo project for Upwork's Java Spring Boot.
+
+## Prerequisites
+
 1. Java 17
 2. Git
 3. Docker
 
-## how to run the project
-1. git clone https://github.com/ivanplaton/upwork-demo.git
-2. open the project via intellij
-3. make sure Docker is running
-4. run the commands in intellij terminal in order:
-   1. ./gradlew clean build
-   2. docker-compose build
-   3. docker-compose up -d
-5. open browser, then go to "localhost:8080" or "localhost:8080/login"
+## How to Run the Project
 
-## credentials
-- username: user 
-- password: password
-<br>
-- username: the_random_guy
-- password: upworkdemo
+1. clone the repository
+   ```bash
+   git clone https://github.com/ivanplaton/upwork-demo.git
+   ```
+2. open the project via IntelliJ
+3. make sure Docker is running
+4. run the commands in IntelliJ terminal in order:
+   ```bash
+   ./gradlew clean build
+   docker-compose build
+   docker-compose up -d
+   ```
+5. open browser, then go to *http://localhost:8080* or *http://localhost:8080/login*
+
+## Credentials
+
+| Username       | Password   |
+|----------------|------------|
+| the_random_guy | upworkdemo |
+| user           | password   |
