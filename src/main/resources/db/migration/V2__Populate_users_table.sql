@@ -1,0 +1,2 @@
+insert into users (username, password, enabled) values ('user', '$2a$12$KmCZtcpZhNsSoq/Gv/KaBuP3IxyT9ifCSWD.kd3qOoDAyHLsypLEK', true);
+insert into users (username, password, enabled) values ('the_random_guy', '$2a$12$do0WovKXIOOFlina3uOl9uYGyk4LLU7AZcQOwmmMpb3i1HVXnsHre', true);
