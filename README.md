@@ -2,8 +2,9 @@
 This is a demo project for upwork's java spring boot
 
 ## prerequisites
-1. Git
-2. Docker
+1. Java 17
+2. Git
+3. Docker
 
 ## how to run the project
 1. git clone https://github.com/ivanplaton/upwork-demo.git
