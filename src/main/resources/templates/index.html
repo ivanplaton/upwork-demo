@@ -76,7 +76,10 @@
             },
             body: JSON.stringify({ message: feedback })
         })
-        .then(response => response.text())
+        .then(response => {
+            document.getElementById('feedback').value = '';
+            return response.text()
+        })
         .then(data => document.getElementById('message').innerHTML = data)
         .catch(error => document.getElementById('message').innerHTML = 'Error submitting feedback. Please try again later.');
     });
